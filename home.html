@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Key Change Tool</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            margin-bottom: 1rem;
+        }
+
+        #drop-area {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 20rem;
+            border: 2px dashed #ccc;
+            border-radius: 0.5rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        #key-change-controls {
+            margin-top: 1rem;
+        }
+
+        #audio-controls {
+            margin-top: 1rem;
+        }
+
+        button {
+            margin-right: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Key Change Tool</h1>
+    <div id="drop-area">
+        <form class="my-form">
+            <p>Drag and drop an audio file here, or click to select a file</p>
+            <input type="file" id="fileElem" accept="audio/*" onchange="handleFiles(this.files)">
+        </form>
+    </div>
+    <div id="key-change-controls" style="display:none;">
+        <p>Original key: <span id="original-key"></span></p>
+        <p>Desired key:
+            <select id="desired-key">
+                <option value="A">A</option>
+                <option value="A#">A#</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+                <option value="C#">C#</option>
+                <option value="D">D</option>
+                <option value="D#">D#</option>
+                <option value="E">E</option>
+                <option value="F">F</option>
+                <option value="F#">F#</option>
+                <option value="G">G</option>
+                <option value="G#">G#</option>
+            </select>
+        </p>
+        <button id="change-key-btn" onclick="changeKey()">Change Key</button>
+    </div>
+    <div id="audio-controls" style="display:block;">
+        <p>Playback controls:</p>
+        <button id="play-btn" onclick="play()">Play</button>
+        <button id="pause-btn" onclick="pause()">Pause</button>
+        <button id="stop-btn" onclick="stop()">Stop</button>
+        <audio id="audio" src=""></audio>
+    </div>
+    <!-- <script src="script.js"></script> -->
+    <script>
+        // Get references to the HTML elements
+        const dropArea = document.getElementById('drop-area');
+        const fileElem = document.getElementById('fileElem');
+        const originalKeyElem = document.getElementById('original-key');
+        const desiredKeyElem = document.getElementById('desired-key');
+        const changeKeyBtn = document.getElementById('change-key-btn');
+        const audioElem = document.getElementById('audio');
+        const playBtn = document.getElementById('play-btn');
+        // const pauseBtn
+
+    </script>
+</body>
+
+</html>

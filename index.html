@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Key Changer</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <h1>Key Changer</h1>
+  <form>
+    <input type="file" id="fileInput" accept=".mp3,.wav,.ogg">
+    <label for="keySelect">Desired Key:</label>
+    <select id="keySelect">
+      <option value="A">A</option>
+      <option value="A#">A#</option>
+      <option value="B">B</option>
+      <option value="C">C</option>
+      <option value="C#">C#</option>
+      <option value="D">D</option>
+      <option value="D#">D#</option>
+      <option value="E">E</option>
+      <option value="F">F</option>
+      <option value="F#">F#</option>
+      <option value="G">G</option>
+      <option value="G#">G#</option>
+    </select>
+    <button type="button" onclick="changeKey()">Change Key</button>
+  </form>
+  <audio id="audioPlayer"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
